@@ -1,0 +1,59 @@
+---
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Flexbox Tutorial</title>
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
+<style is:global>
+    :root {
+        --font-family: "IBM Plex Sans", sans-serif;
+        --color-dark: #000;
+        --color-light: #ffeead;
+        --color-primary: hsl(0 , 50%, 75%);
+        --color-secondary: hsl(120, 50%, 75%);
+        --color-tertiary: hsl(240, 50%, 75%);
+        --border-spec: 4px solid #ffcc5c;
+        line-height: 1.5;
+    }
+    body {
+        background-color: var(--color-light);
+        color: var(--color-dark);
+        font-family: var(--font-family);
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+
+    .flow > * {
+		margin: 0;
+	}
+	.flow > * + * {
+		margin-top: .5rem;
+	}
+</style>

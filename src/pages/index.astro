@@ -1,16 +1,15 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+	<main class="flow">
+		<h1>Flexbox Tutorial</h1>
+		<p>
+			This site is a collection of flexbox examples based on Scrimba's
+			<a href="https://flexbox.dev/" target="_blank">Learn Flexbox</a>
+			course.
+		</p>
+		<a href="/one/">display: flex</a>
+	</main>
+</BaseLayout>
