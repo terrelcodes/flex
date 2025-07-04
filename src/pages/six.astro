@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+	<main>
+		<div class="box">
+			<img src="https://placehold.co/32x32" alt="placeholder" />
+			<p>home</p>
+			<p>search</p>
+			<p>logout</p>
+		</div>
+		<section class="flow">
+			<h1>Filling the space: cross-axis</h1>
+			<p>
+				Previously, we allowed the box to take its natural height. Now
+				we will make it taller so we can see the effect of the <a
+					href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"
+					target="_blank"><code>align-items</code></a
+				> property.
+			</p>
+			<p>
+				Use the developer tools to inspect the box above. Change the <code
+					>align-items</code
+				> property to <code>flex-start</code> (the default is <code
+					>stretch</code
+				>). What happens to the items? Try <code>flex-end</code> and <code
+					>center</code
+				>. How does <code
+					>baseline</code
+				> affect the image? Notice that the image maintains its aspect ratio in all cases: except when <code>stretch</code> is used, it can even overflow the box. (Try adding <code>overflow: hidden</code> to the box.) <code>baseline</code> can cause the other items to overflow.
+			</p>
+			<p>
+				You can also use the <code>align-self</code> property to override
+				the
+				<code>align-items</code> property for a specific item. This is useful
+				when you want to align a specific item to the top, bottom, or center
+				of the container. Experiment with this. Compare it to what you can do
+				 with <code>margin-?: auto</code> as discussed in a previous section.
+			</p>
+			<p>
+				Interesting effects can be created by using the <a
+					href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"
+					target="_blank"><code>align-self</code></a
+				>
+				in combination with the <a
+					href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"
+					target="_blank"><code>justify-content</code></a
+				> property. <a
+					href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self"
+					target="_blank"><code>justify-self</code></a
+				>
+				is also available.
+			</p>
+		</section>
+	</main>
+	<footer>
+		<a href="../five/">back</a> | <a href="../">up</a>
+	</footer>
+</BaseLayout>
+
+<style>
+	.box {
+		border: var(--border-spec);
+		display: flex;
+		justify-content: flex-start;
+		height: 20rem;
+	}
+	.box > * {
+		padding: 1rem;
+		color: var(--color-light);
+		margin: 0;
+		text-transform: capitalize;
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: 1;
+	}
+	.box > *:nth-child(3n + 1) {
+		background-color: var(--color-primary);
+	}
+	.box > *:nth-child(3n + 2) {
+		background-color: var(--color-secondary);
+	}
+	.box > *:nth-child(3n) {
+		background-color: var(--color-tertiary);
+	}
+	.box > * {
+		flex-grow: 1;
+	}
+</style>
