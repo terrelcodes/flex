@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+	<main>
+		<div class="box">
+			<p>home</p>
+			<p>search</p>
+			<p>logout</p>
+		</div>
+		<section class="flow">
+			<h1>Positioning items</h1>
+			<p>
+				In addition to using the <code>justify-content</code> property to
+				position items along the main axis, you can use the <code
+					>margin</code
+				> property of the items to create a gap between them.
+			</p>
+			<p>Use the developer tools to inspect the box above.</p>
+			<p>
+				Inspect the first item and add a <code>margin-right: auto</code
+				>. Remove it.
+			</p>
+			<p>
+				Inspect the second item and add a <code>margin-left: auto</code
+				>. Remove it.
+			</p>
+			<p>
+				Inspect the third item and add a <code>margin-left: auto</code>.
+			</p>
+		</section>
+		<footer>
+			<p>Next: <a href="../five/">flex-grow</a></p>
+		</footer>
+	</main>
+</BaseLayout>
+<style>
+	.box {
+		border: var(--border-spec);
+		display: flex;
+		justify-content: flex-start;
+	}
+	.box > * {
+		padding: 1rem;
+		color: var(--color-light);
+		margin: 0;
+		text-transform: capitalize;
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: 1;
+	}
+	.box > *:nth-child(3n + 1) {
+		background-color: var(--color-primary);
+	}
+	.box > *:nth-child(3n + 2) {
+		background-color: var(--color-secondary);
+	}
+	.box > *:nth-child(3n) {
+		background-color: var(--color-tertiary);
+	}
+</style>
