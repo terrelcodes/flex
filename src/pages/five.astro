@@ -19,12 +19,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 					>.box &gt; * &lbrace; flex-grow: 1; &rbrace;</code
 				>.
 			</p>
-
-			<p>
-				Use the developer tools to inspect the box above. Change the <code
-					>flex-grow</code
-				> property of one of the items to <code>2</code> and see what happens.
-			</p>
 			<p>
 				You will usually want to set the <code>flex-grow</code> property
 				to <code>1</code> for all items. You can also set the <code
@@ -33,20 +27,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 				are not equal in size.
 			</p>
 			<p>
-				You will usually use the shorthand <a
+				Use the developer tools to inspect the box above. Change the <code
+					>flex-grow</code
+				> property of one of the items to <code>2</code> and see what happens.
+				What happens if you set it to <code>0</code>?
+			</p>
+			<p>
+				You will usually see and use the <a
 					href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex"
-					target="_blank"><code>flex: 1</code></a
-				> to set the <code>flex-grow</code> property to <code>1</code>.
+					target="_blank">shorthand</a
+				>
+				<code>flex: 1</code> instead of <code>flex-grow: 1</code>.
 			</p>
 		</section>
 	</main>
 	<footer>
-	<a href="../four/">back</a> | <a href="../">up</a> | <a href="../six/"
-		>next: flex-shrink</a
-	>
-</footer>
+		<a href="../four/">back</a> | <a href="../">up</a> | <a href="../six/"
+			>next: flex-shrink</a
+		>
+	</footer>
 </BaseLayout>
-
 
 <style>
 	.box {
