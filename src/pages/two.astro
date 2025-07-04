@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+	<main class="flow">
+		<div class="box">
+			<p>home</p>
+			<p>search</p>
+			<p>logout</p>
+		</div>
+	</main>
+</BaseLayout>
+<style>
+	.box {
+		border: var(--border-spec);
+		display: flex;
+		flex-direction: column;
+	}
+	.box > * {
+		padding: 1rem;
+		color: var(--color-light);
+		margin: 0;
+		text-transform: capitalize;
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: 1;
+		
+	}
+	.box > *:nth-child(3n + 1) {
+		background-color: var(--color-primary);
+	}
+	.box > *:nth-child(3n + 2) {
+		background-color: var(--color-secondary);
+	}
+	.box > *:nth-child(3n) {
+		background-color: var(--color-tertiary);
+	}
+</style>
