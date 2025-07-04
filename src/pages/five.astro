@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+	<main>
+		<div class="box">
+			<p>home</p>
+			<p>search</p>
+			<p>logout</p>
+		</div>
+		<section class="flow">
+			<h1>Filling the space: flex-grow</h1>
+			<p>
+				Your will often want to create a layout where the items fill the
+				space available and are equal in size. The easiest way to do
+				this is to use the <code>flex-grow</code> property. You will often
+				use a compound selector to target all of the items: eg. <code
+					>.box &gt; * &lbrace; flex-grow: 1; &rbrace;</code
+				>.
+			</p>
+
+			<p>
+				Use the developer tools to inspect the box above. Change the <code
+					>flex-grow</code
+				> property of one of the items to <code>2</code> and see what happens.
+			</p>
+			<p>
+				You will usually want to set the <code>flex-grow</code> property
+				to <code>1</code> for all items. You can also set the <code
+					>flex-grow</code
+				> property to a different value to create a layout where the items
+				are not equal in size.
+			</p>
+			<p>
+				You will usually use the shorthand <a
+					href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex"
+					target="_blank"><code>flex: 1</code></a
+				> to set the <code>flex-grow</code> property to <code>1</code>.
+			</p>
+		</section>
+	</main>
+	<footer>
+	<a href="../four/">back</a> | <a href="../">up</a> | <a href="../six/"
+		>next: flex-shrink</a
+	>
+</footer>
+</BaseLayout>
+
+
+<style>
+	.box {
+		border: var(--border-spec);
+		display: flex;
+		justify-content: flex-start;
+	}
+	.box > * {
+		padding: 1rem;
+		color: var(--color-light);
+		margin: 0;
+		text-transform: capitalize;
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: 1;
+	}
+	.box > *:nth-child(3n + 1) {
+		background-color: var(--color-primary);
+	}
+	.box > *:nth-child(3n + 2) {
+		background-color: var(--color-secondary);
+	}
+	.box > *:nth-child(3n) {
+		background-color: var(--color-tertiary);
+	}
+	.box > * {
+		flex-grow: 1;
+	}
+</style>
