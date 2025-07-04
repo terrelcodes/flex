@@ -9,11 +9,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			<p>search</p>
 			<p>logout</p>
 		</div>
-		<p>Use the developer tools to inspect the box above and see the effect of the <code>flex-direction</code> property. 
-			Try changing it to <code>row</code> (the default),
-			<code>column</code>, <code>row-reverse</code>, and <code>column-reverse</code>.</p>
-		<p>Next: <a href="../three/">justify-content</a></p>
+		<section class="flow">
+			<h1>flex-direction</h1>
+			<p>
+				Use the developer tools to inspect the box above and see the
+				effect of the <code>flex-direction</code> property. Try changing
+				it to <code>row</code> (the default),
+				<code>column</code>, <code>row-reverse</code>, and <code
+					>column-reverse</code
+				>.
+			</p>
+		</section>
 	</main>
+	<footer>
+		<a href="../one/">back</a> | <a href="../">up</a> | <a href="../three/">next: justify-content</a>
+	</footer>
 </BaseLayout>
 <style>
 	.box {
@@ -29,7 +39,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		font-weight: 500;
 		font-size: 2rem;
 		line-height: 1;
-		
 	}
 	.box > *:nth-child(3n + 1) {
 		background-color: var(--color-primary);

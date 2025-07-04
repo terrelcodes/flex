@@ -3,24 +3,28 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-	<main class="flow">
+	<main>
 		<div class="box">
 			<p>home</p>
 			<p>search</p>
 			<p>logout</p>
 		</div>
-		<p>
-			Use the developer tools to inspect the box above and see the effect
-			of the <code>justify-content</code> property. Try changing it to <code
-				>flex-start</code
-			> (the default),
-			<code>flex-end</code>, <code>center</code>,
-			<code>space-between</code>, <code>space-evenly</code>, and <code
-				>space-around</code
-			>.
-		</p>
-		<p>Next: <a href="../four/">positioning items</a></p>
+		<section class="flow">
+			<h1>justify-content</h1>
+			<p>
+				Use the developer tools to inspect the box above and see the
+				effect of the <code>justify-content</code> property. Try changing
+				it to <code>flex-start</code> (the default),
+				<code>flex-end</code>, <code>center</code>,
+				<code>space-between</code>, <code>space-evenly</code>, and <code
+					>space-around</code
+				>.
+			</p>
+		</section>
 	</main>
+	<footer>
+		<a href="../two/">back</a> | <a href="../">up</a> | <a href="../four/">next: positioning items</a>
+	</footer>
 </BaseLayout>
 <style>
 	.box {

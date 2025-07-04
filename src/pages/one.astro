@@ -3,16 +3,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-	<main class="flow">
+	<main>
 		<div class="box">
 			<p>home</p>
 			<p>search</p>
 			<p>logout</p>
 		</div>
-		<p>Use the developer tools to inspect the box above and see how the flexbox is applied. 
-			Change the <code>display</code> property from <code>block</code> to <code>flex</code>.</p>
-		<p>Next: <a href="../two/">flex-direction</a></p>
+		<section class="flow">
+			<h1>display: flex</h1>
+			<p>
+				Use the developer tools to inspect the box above and see how the
+				flexbox is applied. Change the <code>display</code> property from
+				<code>block</code> to <code>flex</code>.
+			</p>
+		</section>
 	</main>
+	<footer>
+		<a href="../">up</a> | <a href="../two/">next: flex-direction</a>
+	</footer>
 </BaseLayout>
 <style>
 	.box {
@@ -28,7 +36,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		font-weight: 500;
 		font-size: 2rem;
 		line-height: 1;
-
 	}
 	.box > *:nth-child(3n + 1) {
 		background-color: var(--color-primary);
