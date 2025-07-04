@@ -9,16 +9,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			<p>search</p>
 			<p>logout</p>
 		</div>
-		<p>Use the developer tools to inspect the box above and see how the flexbox is applied. 
-			Change the <code>display</code> property from <code>block</code> to <code>flex</code>.</p>
-		<p>Next: <a href="../two/">flex-direction</a></p>
+		<p>
+			Use the developer tools to inspect the box above and see the effect
+			of the <code>justify-content</code> property. Try changing it to <code
+				>flex-start</code
+			> (the default),
+			<code>flex-end</code>, <code>center</code>,
+			<code>space-between</code>, <code>space-evenly</code>, and <code
+				>space-around</code
+			>.
+		</p>
+		<p>Next: <a href="../four/">positioning items</a></p>
 	</main>
 </BaseLayout>
 <style>
 	.box {
 		border: var(--border-spec);
 		display: flex;
-		/* flex-direction: column; */
+		justify-content: flex-start;
 	}
 	.box > * {
 		padding: 1rem;
@@ -28,7 +36,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		font-weight: 500;
 		font-size: 2rem;
 		line-height: 1;
-
 	}
 	.box > *:nth-child(3n + 1) {
 		background-color: var(--color-primary);
